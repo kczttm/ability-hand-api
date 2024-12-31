@@ -1,0 +1,1 @@
+python example_position_plotting_allserial.py > log.csv && python plot_csv.py --name log.csv
