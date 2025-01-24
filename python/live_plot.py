@@ -35,10 +35,10 @@ def setupSerial(baud):
 	for p in com_ports_list:
 		if(p):
 			if platform.system() == 'Linux' or platform.system() == 'Darwin':
-				# if "USB" in p[0]:
-				port = p
-				print("Found:", port)
-				break
+				if "USB" in p[0]:
+					port = p
+					print("Found:", port)
+					break
 			elif platform.system() == 'Windows':
 				if "COM" in p[0]:
 					port = p
